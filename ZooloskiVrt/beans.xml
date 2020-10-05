@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="bear" class="com.vladancupric.Animal">
+		<property name="name" value="Pera"></property>
+		<property name="species" value="Bear"></property>
+	</bean>
+	<bean id="wolf" class="com.vladancupric.Animal">
+		<property name="name" value="John"></property>
+		<property name="species" value="Wolf"></property>
+	</bean>
+	<bean id="elephant" class="com.vladancupric.Animal">
+		<property name="name" value="Mich"></property>
+		<property name="species" value="Elephant"></property>
+	</bean>
+	<bean id="zoo" class="com.vladancupric.ZooloskiVrt">
+		<property name="list">
+			<list>
+				<ref bean = "bear"/>
+				<ref bean = "wolf"/>
+				<ref bean = "elephant"/>
+				
+			</list>
+		</property>
+	</bean>
+</beans>
